@@ -1,0 +1,80 @@
+.trustedSection {
+    padding-top: 48px;
+    padding-bottom: 32px;
+    background-color: #131B27;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.title {
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    opacity: 1;
+    text-align: center;
+    margin: 0;
+}
+
+.carouselContainer {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0;
+}
+
+.carouselTrack {
+    display: flex;
+    gap: 60px;
+    /* Space between logos */
+    align-items: center;
+    width: max-content;
+}
+
+.logoWrapper {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoImage {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    /* Make logos purely white as in the example */
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.logoImage:hover {
+    opacity: 1;
+}
+
+/* Infinity fade effect on sides */
+.carouselContainer::before,
+.carouselContainer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.carouselContainer::before {
+    left: 0;
+    background: linear-gradient(to right, #131B27, transparent);
+}
+
+.carouselContainer::after {
+    right: 0;
+    background: linear-gradient(to left, #131B27, transparent);
+}

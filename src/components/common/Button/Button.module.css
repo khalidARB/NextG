@@ -1,0 +1,63 @@
+.gradientBtn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 6px 6px 24px;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary {
+    background: var(--primary-gradient);
+    color: #FFFFFF;
+}
+
+.secondary {
+    background: #FFFFFF;
+    color: #1743E1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.secondary .text {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.iconCircle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.primary .iconCircle {
+    background-color: #FFFFFF;
+    color: #1743E1;
+}
+
+.secondary .iconCircle {
+    background: var(--primary-gradient);
+    color: #FFFFFF;
+}
+
+.gradientBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(23, 67, 225, 0.25);
+}
+
+.secondary:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gradientBtn:hover .iconCircle {
+    transform: rotate(-45deg);
+}
