@@ -15,7 +15,8 @@
     top: 70px;
     left: 0;
     width: 100%;
-    height: calc(100% - 70px);
+    height: 500px;
+    /* Limit height so it doesn't go too far down */
     z-index: 1;
 }
 
