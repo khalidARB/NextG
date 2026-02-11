@@ -23,8 +23,8 @@ const logos = [
     { src: uber, alt: 'Uber' },
 ];
 
-// Duplicate logos for seamless loop
-const extendedLogos = [...logos, ...logos, ...logos];
+// Duplicate logos for seamless loop - using 4 sets to ensure no empty space on wide screens
+const extendedLogos = [...logos, ...logos, ...logos, ...logos];
 
 const TrustedBy = () => {
     return (
@@ -35,13 +35,13 @@ const TrustedBy = () => {
                 <motion.div
                     className={styles.carouselTrack}
                     animate={{
-                        x: [0, -100 * logos.length - (60 * logos.length)], // Adjust based on gap and item width
+                        x: ["0%", "-25%"],
                     }}
                     transition={{
                         x: {
                             repeat: Infinity,
                             repeatType: "loop",
-                            duration: 30, // Adjust speed
+                            duration: 30, // Smoother speed for 4 sets
                             ease: "linear",
                         },
                     }}

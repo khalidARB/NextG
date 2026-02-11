@@ -38,11 +38,30 @@
     font-size: 16px;
     font-weight: 500;
     transition: opacity 0.2s;
+    position: relative;
+    padding: 4px 0;
 }
+
+.navLinks li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    bottom: -4px;
+    left: 0;
+    background: linear-gradient(0deg, #2BD4EE -177.5%, #1743E1 87.36%);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
 
 .navLinks li a:hover {
     opacity: 1;
-    color: var(--accent);
+}
+
+.navLinks li a:hover::after {
+    transform: scaleX(1);
 }
 
 
@@ -150,11 +169,29 @@
     font-weight: 600;
     transition: all 0.3s ease;
     display: inline-block;
+    position: relative;
+    padding: 8px 0;
+}
+
+.mobileNavLinks li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg, #2BD4EE -177.5%, #1743E1 87.36%);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
 }
 
 .mobileNavLinks li a:hover {
-    color: var(--accent);
     transform: translateY(-2px);
+}
+
+.mobileNavLinks li a:hover::after {
+    transform: scaleX(1);
 }
 
 

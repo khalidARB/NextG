@@ -26,6 +26,10 @@
     .title {
         font-size: 18px;
     }
+
+    .logoImage {
+        height: 32px;
+    }
 }
 
 
@@ -42,6 +46,8 @@
     /* Space between logos */
     align-items: center;
     width: max-content;
+    padding-right: 60px;
+    /* Match gap for seamless percentage scroll */
 }
 
 .logoWrapper {
