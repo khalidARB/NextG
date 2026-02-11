@@ -72,10 +72,45 @@
 }
 
 /* Responsive fixes */
+@media (max-width: 1024px) {
+    .heroSection {
+        padding: 100px 0 60px 0;
+    }
+
+    .title {
+        font-size: 48px;
+    }
+}
+
 @media (max-width: 768px) {
+    .heroSection {
+        padding: 80px 0 40px 0;
+        min-height: auto;
+    }
+
+    .contentLayer {
+        padding: 0 20px;
+    }
+
+    .title {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+
+    .description {
+        font-size: 14px;
+        margin-bottom: 32px;
+    }
+
     .btnGroup {
         flex-direction: column;
         width: 100%;
         max-width: 300px;
+        gap: 12px;
+    }
+
+    .heroBtn {
+        width: 100%;
+        justify-content: space-between;
     }
 }

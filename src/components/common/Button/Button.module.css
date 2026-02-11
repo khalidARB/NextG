@@ -61,3 +61,21 @@
 .gradientBtn:hover .iconCircle {
     transform: rotate(-45deg);
 }
+
+.fullWidth {
+    width: 100%;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .gradientBtn {
+        padding: 5px 5px 5px 18px;
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    .iconCircle {
+        width: 28px;
+        height: 28px;
+    }
+}

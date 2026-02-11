@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { ArrowCircleRightIcon } from '../Icons/Icons';
 import styles from './Button.module.css';
 
-const Button = ({ children, icon: Icon = ArrowCircleRightIcon, onClick, className, variant = 'primary' }) => {
+const Button = ({ children, icon: Icon = ArrowCircleRightIcon, onClick, className, variant = 'primary', fullWidth = false }) => {
     return (
         <motion.button
-            className={`${styles.gradientBtn} ${styles[variant]} ${className || ''}`}
+            className={`${styles.gradientBtn} ${styles[variant]} ${fullWidth ? styles.fullWidth : ''} ${className || ''}`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={onClick}
