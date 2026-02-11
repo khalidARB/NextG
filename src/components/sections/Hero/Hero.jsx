@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Phone } from 'lucide-react';
+import { PhoneTelephoneIcon } from '../../common/Icons/Icons';
 import styles from './Hero.module.css';
 import Badge from '../../common/Badge/Badge';
 import Button from '../../common/Button/Button';
@@ -51,7 +51,7 @@ const Hero = () => {
                     transition={{ duration: 0.6, delay: 0.5 }}
                 >
                     <Button>See How We Work</Button>
-                    <Button icon={Phone} variant="secondary">Contact Now: (469) 202-0555</Button>
+                    <Button icon={PhoneTelephoneIcon} variant="secondary">Contact Now: (469) 202-0555</Button>
                 </motion.div>
             </div>
         </section>

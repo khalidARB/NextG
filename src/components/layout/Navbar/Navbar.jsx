@@ -1,11 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sun } from 'lucide-react';
+import { SunOneIcon, MoonIcon } from '../../common/Icons/Icons';
 import Logo from '../../common/Logo/Logo';
 import Button from '../../common/Button/Button';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
+    const [theme, setTheme] = React.useState('dark');
+
+    const toggleTheme = () => {
+        const newTheme = theme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+        document.documentElement.setAttribute('data-theme', newTheme);
+    };
+
     const navLinks = [
         { name: 'Home', href: '#' },
         { name: 'About', href: '#' },
@@ -34,8 +42,12 @@ const Navbar = () => {
                 </ul>
 
                 <div className={styles.actions}>
-                    <button className={styles.themeToggle}>
-                        <Sun size={16} color="#1e5cf5" />
+                    <button className={styles.themeToggle} onClick={toggleTheme}>
+                        {theme === 'dark' ? (
+                            <SunOneIcon size={16} />
+                        ) : (
+                            <MoonIcon size={16} />
+                        )}
                     </button>
 
                     <Button>Contact Us</Button>

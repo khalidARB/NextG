@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowCircleRightIcon } from '../Icons/Icons';
 import styles from './Button.module.css';
 
-const Button = ({ children, icon: Icon = ArrowRight, onClick, className, variant = 'primary' }) => {
+const Button = ({ children, icon: Icon = ArrowCircleRightIcon, onClick, className, variant = 'primary' }) => {
     return (
         <motion.button
             className={`${styles.gradientBtn} ${styles[variant]} ${className || ''}`}

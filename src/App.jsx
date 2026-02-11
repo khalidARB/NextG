@@ -4,6 +4,7 @@ import styles from './App.module.css';
 
 import Hero from './components/sections/Hero/Hero';
 import TrustedBy from './components/sections/TrustedBy/TrustedBy';
+import AgencySection from './components/sections/AgencySection/AgencySection';
 
 function App() {
   useEffect(() => {
@@ -17,6 +18,7 @@ function App() {
       <main className={styles.mainContent}>
         <Hero />
         <TrustedBy />
+        <AgencySection />
         {/* Further sections will be added here */}
       </main>
     </div>
